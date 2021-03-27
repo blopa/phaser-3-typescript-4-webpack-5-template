@@ -1,12 +1,14 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-var-requires, import/no-extraneous-dependencies */
 const path = require('path');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: {
-        app: './src/main.ts',
+        app: './src/Main.tsx',
+        styles: path.resolve(__dirname, 'assets', 'template', 'styles.css'),
         vendors: ['phaser'],
     },
     module: {
@@ -15,6 +17,13 @@ module.exports = {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                ],
             },
         ],
     },
@@ -32,11 +41,14 @@ module.exports = {
         open: true,
     },
     plugins: [
+        new MiniCssExtractPlugin({
+            filename: '[name].[hash:8].css',
+        }),
         new HtmlWebpackPlugin({
             hash: true,
             title: 'Sample game',
             favicon: path.resolve(__dirname, 'assets', 'images', 'favicon.ico'),
-            template: `template.html`,
+            template: path.resolve(__dirname, 'assets', 'template', 'template.html'),
             filename: path.resolve(__dirname, 'dist', 'index.html'),
             publicPath: './build',
         }),

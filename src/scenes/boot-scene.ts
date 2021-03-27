@@ -1,3 +1,4 @@
+import * as Phaser from 'phaser';
 import { getGameWidth, getGameHeight } from '../helpers';
 
 const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
@@ -9,7 +10,7 @@ const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
 /**
  * The initial scene that loads all necessary assets to the game and displays a loading bar.
  */
-export class BootScene extends Phaser.Scene {
+export default class BootScene extends Phaser.Scene {
     constructor() {
         super(sceneConfig);
     }
@@ -33,7 +34,7 @@ export class BootScene extends Phaser.Scene {
             halfHeight,
             10,
             progressBarHeight - 20,
-            0x888888,
+            0x888888
         );
 
         const loadingText = this.add.text(halfWidth - 75, halfHeight - 100, 'Loading...').setFontSize(24);

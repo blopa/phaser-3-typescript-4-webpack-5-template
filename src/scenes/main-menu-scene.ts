@@ -1,4 +1,5 @@
-import { MenuButton } from '../ui/menu-button';
+import * as Phaser from 'phaser';
+import MenuButton from '../ui/menu-button';
 
 const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
     active: false,
@@ -9,7 +10,7 @@ const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
 /**
  * The initial scene that starts, shows the splash screens, and loads the necessary assets.
  */
-export class MainMenuScene extends Phaser.Scene {
+export default class MainMenuScene extends Phaser.Scene {
     constructor() {
         super(sceneConfig);
     }

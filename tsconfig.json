@@ -1,9 +1,17 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "sourceMap": true
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "jsx": "react"
     },
+    "allowJs": true,
+    "resolveJsonModule": true,
     "include": [
-        "**/*.ts"
+        ".eslintrc.js",
+        "webpack.config.js",
+        "./src/*.tsx",
+        "./src/**/*.ts",
+        "./src/**/*.tsx"
     ],
 }

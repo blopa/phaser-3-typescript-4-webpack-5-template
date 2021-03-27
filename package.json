@@ -2,7 +2,7 @@
   "name": "sample-phaser3-typescript-project",
   "version": "1.0.1",
   "description": "A sample project using Phaser 3 and TypeScript",
-  "main": "src/main.ts",
+  "main": "src/Main.tsx",
   "author": "Joe Bustamante",
   "license": "MIT",
   "private": false,
@@ -15,17 +15,23 @@
     "lint": "eslint src",
     "bump": "ncu -u -t minor"
   },
-  "dependencies": {
-    "phaser": "^3.54.0"
-  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.19.0",
-    "@typescript-eslint/parser": "^4.19.0",
+    "babel-eslint": "^10.1.0",
     "copy-webpack-plugin": "^8.1.0",
+    "css-loader": "^5.2.0",
     "eslint": "^7.23.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-unicorn": "^29.0.0",
+    "eslint-plugin-unused-imports": "^1.1.0",
     "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.4.0",
     "npm-check-updates": "^11.3.0",
     "prettier": "^2.2.1",
     "ts-loader": "^8.0.18",
@@ -34,5 +40,10 @@
     "webpack": "^5.28.0",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "phaser": "^3.54.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

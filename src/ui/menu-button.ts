@@ -4,7 +4,7 @@ const padding = 10;
 const minimumWidth = 200;
 const minimumHeight = 50;
 
-export class MenuButton extends Phaser.GameObjects.Rectangle {
+export default class MenuButton extends Phaser.GameObjects.Rectangle {
     private label: Phaser.GameObjects.Text;
 
     constructor(scene: Phaser.Scene, x: number, y: number, text: string, onClick?: () => void) {
