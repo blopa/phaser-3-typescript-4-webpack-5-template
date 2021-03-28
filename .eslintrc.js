@@ -202,7 +202,6 @@ module.exports = {
                 max: 1,
             },
         ],
-        'multiline-comment-style': 'warn',
         'new-parens': 'warn',
         'no-array-constructor': 'warn',
         'no-bitwise': 'warn',

@@ -7,11 +7,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "npm run build:dev",
-    "build:dev": "NODE_ENV=development webpack",
-    "build:prod": "NODE_ENV=production webpack",
-    "dev": "NODE_ENV=development webpack serve",
-    "prod": "NODE_ENV=production webpack-dev-server",
+    "build": "webpack --env=production",
+    "dev": "webpack serve --env=development",
     "lint": "eslint src",
     "bump": "ncu -u -t minor"
   },
@@ -34,7 +31,7 @@
     "mini-css-extract-plugin": "^1.4.0",
     "npm-check-updates": "^11.3.0",
     "prettier": "^2.2.1",
-    "ts-loader": "^8.0.18",
+    "ts-loader": "^8.1.0",
     "typescript": "^4.2.3",
     "typescript-tslint-plugin": "^1.0.1",
     "webpack": "^5.28.0",
