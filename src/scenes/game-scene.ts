@@ -1,4 +1,3 @@
-import { Input } from 'phaser';
 import { getGameWidth, getGameHeight } from '../helpers';
 
 const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
@@ -11,6 +10,7 @@ export class GameScene extends Phaser.Scene {
     public speed = 200;
 
     private cursorKeys: Phaser.Types.Input.Keyboard.CursorKeys;
+
     private image: Phaser.Physics.Arcade.Sprite;
 
     constructor() {

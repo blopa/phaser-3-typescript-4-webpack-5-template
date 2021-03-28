@@ -19,6 +19,7 @@ const gameConfig: Phaser.Types.Core.GameConfig = {
     backgroundColor: '#000000',
 };
 
+// eslint-disable-next-line import/prefer-default-export
 export const game = new Phaser.Game(gameConfig);
 
 window.addEventListener('resize', () => {

@@ -4,6 +4,7 @@ const padding = 10;
 const minimumWidth = 200;
 const minimumHeight = 50;
 
+// eslint-disable-next-line import/prefer-default-export
 export class MenuButton extends Phaser.GameObjects.Rectangle {
     private label: Phaser.GameObjects.Text;
 
